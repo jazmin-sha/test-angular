@@ -47,15 +47,15 @@ export class ProductService {
     )
   }
 
-  create(post:any): Observable<Product[]> {
-    return this.http.post<Product[]>(this.baseUrl, JSON.stringify(post))
+  create(data:any): Observable<Product> {
+    return this.http.post<Product>(this.baseUrl, JSON.stringify(data))
     .pipe(
       catchError(this.errorHandler)
     )
   }
 
-  update(id:any, post:any): Observable<Product[]> {
-    return this.http.put<Product[]>(this.baseUrl , JSON.stringify(post))
+  update(id:any, data:any): Observable<Product[]> {
+    return this.http.put<Product[]>(this.baseUrl , JSON.stringify(data))
     .pipe(
       catchError(this.errorHandler)
     )
