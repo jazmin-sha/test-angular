@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="text-light navbar-brand" routerLinkActive="active" routerLink='/admin/list-products'>
+    <button class="btn btn-warning">Product List</button>
+  </a>
+  <a class="text-light navbar-brand" routerLinkActive="active" routerLink='/admin/add-products'>
+    <button class="btn btn-warning">Add Product</button>
+  </a>
+  <a class="text-light navbar-brand" routerLinkActive="active" routerLink='/'>
+    <button class="btn btn-danger">Logout</button>
+  </a>
+</nav>
+<div class="p-5">
+  <h2>Product List</h2>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Category</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of products">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.productName}}</td>
+        <td>{{item.productPrice}}</td>
+        <td>{{item.productCategory}}</td>
+        <td>{{item.productQuantity}}</td>
+        <td>
+          <a class="p-1">
+            <button class="btn btn-primary "><i class="fa fa-pencil"  ></i></button>
+          </a>
+          <a class="p-1">
+            <button class="btn btn-danger" (click)="deleteProduct(item.id)" ><i class="fa fa-trash"  ></i></button>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

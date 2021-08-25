@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="text-light navbar-brand" routerLinkActive="active" routerLink='/admin/list-products'>
+    <button class="btn btn-warning">Product List</button>
+  </a>
+  <a class="text-light navbar-brand" routerLinkActive="active" routerLink='/admin/add-products'>
+    <button class="btn btn-warning">Add Product</button>
+  </a>
+  <a class="text-light navbar-brand" routerLinkActive="active" routerLink='/'>
+    <button class="btn btn-danger">Logout</button>
+  </a>
+</nav>
+
+<div class="p-5">
+  <h2>Add Product</h2>
+  <div class="login-form-1 bg-dark">
+    <form [formGroup]="addForm" (ngSubmit)="submit()">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Product Name</label>
+        <input type="text" class="form-control" formControlName="productName" id="productName" aria-describedby="emailHelp" placeholder="Product Name">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Product Price</label>
+        <input type="number" class="form-control" formControlName="productPrice" id="productPrice" placeholder="Enter a price">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Product Category</label>
+        <input type="text" class="form-control" formControlName="productCategory" id="productCategory" placeholder="Enter category">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Product Quantity</label>
+        <input type="number" class="form-control" formControlName="productQuantity" id="productQuantity" placeholder="Enter quatity">
+      </div>
+      <br>
+      <button  type="submit" class="btn btn-warning">Save Product </button>
+    </form>
+  </div>
+</div>

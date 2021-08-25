@@ -1,0 +1,23 @@
+<div class=" bg-image" style="
+      background-color: black;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+    ">
+    <div class="container pt-5">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <h2 class="text-warning"> All Products</h2>
+        <a class="text-light navbar-brand mr-auto" routerLinkActive="active" routerLink='/'>
+          <button class="btn btn-danger ">Logout</button>
+        </a>
+      </nav>
+      <ul class="list-group">
+        <li *ngFor="let item of products" class="list-group-item d-flex justify-content-between align-items-center">
+         <h6 class="text-dark p-1"> <b>Name</b>: {{item.productName}}</h6>
+          <h6 class="text-dark  p-1"> <b>Price</b>: {{item.productPrice}}</h6>
+          <h6 class="text-dark  p-1"> <b>Category</b>: {{item.productCategory}}</h6>
+          <h6 class="text-dark  p-1"> <b>Quantity</b>: {{item.productQuantity}}</h6>
+        </li>
+      </ul>
+    </div>
+</div>
