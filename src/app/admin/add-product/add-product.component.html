@@ -13,7 +13,7 @@
 <div class="p-5">
   <h2>Add Product</h2>
   <div class="login-form-1 bg-dark">
-    <form [formGroup]="addForm" (ngSubmit)="submit()">
+    <form [formGroup]="addForm" >
       <div class="form-group">
         <label for="exampleInputEmail1">Product Name</label>
         <input type="text" class="form-control" formControlName="productName" id="productName" aria-describedby="emailHelp" placeholder="Product Name">
@@ -31,7 +31,7 @@
         <input type="number" class="form-control" formControlName="productQuantity" id="productQuantity" placeholder="Enter quatity">
       </div>
       <br>
-      <button  type="submit" class="btn btn-warning">Save Product </button>
+      <button  type="submit" (click)="addProd(addForm.value)" class="btn btn-warning">Save Product </button>
     </form>
   </div>
 </div>

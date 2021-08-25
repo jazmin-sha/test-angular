@@ -8,13 +8,18 @@
       "productCategory": "book"
     },
     {
-      "id": 3
+      "productName": "dwesf",
+      "productPrice": 1200,
+      "productQuantity": 345,
+      "productCategory": "szgdfhxtcjy",
+      "id": 6
     },
     {
-      "id": 4
-    },
-    {
-      "id": 5
+      "productName": "dwesf",
+      "productPrice": 1200,
+      "productQuantity": 345,
+      "productCategory": "szgdfhxtcjy",
+      "id": 7
     }
   ]
 }

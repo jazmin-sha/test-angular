@@ -47,7 +47,7 @@ export class AddProductComponent implements OnInit {
 
   addProd(data:any){
     console.log(data);
-    this.api.create(data).subscribe((response) => {
+    this.api.createProd(data).subscribe((response) => {
       console.log("added");
     })
   }

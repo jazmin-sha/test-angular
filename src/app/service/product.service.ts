@@ -54,6 +54,10 @@ export class ProductService {
     )
   }
 
+  createProd(prod:any){
+    return this.http.post(this.baseUrl,prod)
+  }
+
   update(id:any, data:any): Observable<Product[]> {
     return this.http.put<Product[]>(this.baseUrl , JSON.stringify(data))
     .pipe(
